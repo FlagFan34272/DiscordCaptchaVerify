@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>reCAPTCHA 테스트</title>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<script type="text/javascript">
+	/* 서브밋 전에 리캡챠 체크 여부 를 확인합니다. */
+	function FormSubmit() {
+		if (grecaptcha.getResponse() == "") {
+			alert("리캡챠를 체크해야 합니다.");
+			return false;
+		} else {
+			return true;
+		}
+	}
+	</script>
+</head>
+<body>
+	<br/>
+    <center>
+	<form name="testForm" method="post" action="https://discord.gg/Th5vZEVBC8" onsubmit="return FormSubmit();">
+	
+	
+	<div class="g-recaptcha" data-sitekey="6LfrGnoiAAAAAAdyKvXGpwomPlaXlqZFW7wnqR0I"></div>
+    <input type="submit" name="submit" style="background-color: blue; height: 30px; weight: 100px; color: white;" value="디스코드 가입하기!"><br /><br/>
+	</form>
+    </center>
+</body>
+</html>
